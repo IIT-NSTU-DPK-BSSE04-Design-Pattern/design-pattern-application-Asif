@@ -1,0 +1,43 @@
+@startuml
+
+interface FileProcessor {
+    + read(String filePath)
+    + parse()
+    + save()
+}
+
+class CSVProcessor  {
+    + read(String filePath)
+    + parse()
+    + save()
+}
+
+class JSONProcessor  {
+    + read(String filePath)
+    + parse()
+    + save()
+}
+
+class XMLProcessor  {
+    + read(String filePath)
+    + parse()
+    + save()
+}
+
+class DataProcessor {
+    - fileProcessor: FileProcessor
+    + setFileProcessor(FileProcessor fileProcessor)
+    + processFile(String filePath)
+}
+
+class Main {
+    + main(String[] args)
+}
+
+FileProcessor <|.. CSVProcessor
+FileProcessor <|.. JSONProcessor
+FileProcessor <|.. XMLProcessor
+DataProcessor --> FileProcessor
+Main ..> DataProcessor : uses
+
+@enduml

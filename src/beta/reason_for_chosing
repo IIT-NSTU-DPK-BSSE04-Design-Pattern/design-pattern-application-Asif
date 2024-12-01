@@ -1,0 +1,13 @@
+The Strategy Design Pattern was chosen because:
+
+Different Processing Logic for File Types: CSV, JSON, and XML require distinct ways to read, parse, and save data. The Strategy Pattern allows encapsulating this logic into separate, interchangeable classes.
+
+Extensibility for New Formats: If a new file format (e.g., YAML) needs to be added, a new processor can be created without modifying the existing system, adhering to the Open/Closed Principle.
+
+Dynamic File Processing: The client (DataProcessor) can dynamically select the appropriate processor (e.g., CSVProcessor, JSONProcessor, or XMLProcessor) based on the file type.
+
+Simplified Code Structure: Avoids complex if-else or switch statements in the main processing logic, keeping the system clean and maintainable.
+
+Separation of Concerns: Each file format's processing is isolated in its own class, making the system modular and easier to debug or extend.
+
+In short, the Strategy Pattern aligns perfectly with the scenario's need for flexible, extensible, and clean processing of different file formats.
