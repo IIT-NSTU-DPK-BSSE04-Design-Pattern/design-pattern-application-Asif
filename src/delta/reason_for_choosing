@@ -1,0 +1,8 @@
+The Factory Design Pattern is a creational pattern used to centralize object creation. It abstracts and encapsulates the logic of instantiating objects, allowing the client to create objects without knowing their exact class. This pattern is ideal for scenarios where the system needs to handle multiple types of objects dynamically and ensure extensibility.
+
+Why Use Factory Pattern in Scenario Delta
+Encapsulation of Object Creation: Centralizes the logic for creating different vehicles (Car, Truck, Motorcycle), simplifying the client code.
+Dynamic Selection: Creates vehicles based on user input (e.g., "car" or "truck") at runtime.
+Extensibility: Adding new vehicle types (e.g., Bus) requires minimal changes, adhering to the Open/Closed Principle.
+Separation of Concerns: Keeps the client code (Main) decoupled from specific vehicle classes, improving maintainability.
+Reusability: The factory can be reused across the system wherever vehicles need to be created.

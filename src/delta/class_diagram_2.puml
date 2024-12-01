@@ -1,0 +1,33 @@
+@startuml
+
+interface Vehicle {
+    + assemble()
+}
+
+class Car  {
+    + assemble()
+}
+
+class Truck  {
+    + assemble()
+}
+
+class Motorcycle  {
+    + assemble()
+}
+
+class VehicleFactory {
+    + static createVehicle(String vehicleType): Vehicle
+}
+
+class Main {
+    + main(String[] args)
+}
+
+Vehicle <|.. Car
+Vehicle <|.. Truck
+Vehicle <|.. Motorcycle
+Main ..> VehicleFactory : uses
+VehicleFactory --> Vehicle : creates
+
+@enduml
